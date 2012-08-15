@@ -317,12 +317,30 @@ $ git push origin feature-nueva
     
     \begin{block}{Sujeto ''B'' quiere trabajar en la misma feature}
       \begin{verbatim}
-$ git remote update
+$ git fetch origin
 $ git branch -a
-# master
+# *master
 # remotes/origin/HEAD -> origin/master
 # remotes/origin/feature-nueva
-$ git checkout -b feature-nueva origin/feature-nueva
+$ git checkout feature-nueva
+      \end{verbatim}
+    \end{block}
+  
+\end{frame}
+
+\begin{frame}[fragile]\frametitle{Borrar una rama}
+
+    \begin{block}{En mi repo local}
+      Si es una rama local o sólo queremos eliminarla de nuestro repo, este paso es único.
+      \begin{verbatim}
+$ git branch -d <rama>
+      \end{verbatim}
+    \end{block} \pause
+    
+    \begin{block}{En origen remoto}
+      Si además queremos borrarla del origen remoto
+      \begin{verbatim}
+$ git push origin :<rama>
       \end{verbatim}
     \end{block}
   
