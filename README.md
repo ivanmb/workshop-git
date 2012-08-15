@@ -1,4 +1,4 @@
 workshop-git
 ============
 
-Un workshop de git
+Un workshops de git

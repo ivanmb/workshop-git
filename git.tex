@@ -39,10 +39,10 @@
   \end{block} \pause
   
   \begin{block}{Comentario}
-    Así como se autodenomina distribuido, en realidad es también centralizado. Cuando nosotros mandamos nuestros cambios,
+    Así como se denomina distribuido, en realidad nosotros lo usamos en forma centralizada. Cuando mandamos nuestros cambios,
     lo hacemos a un repositorio remoto. De todos modos, cada uno tiene en su máquina un repositorio con toda la información
-    histórica de las ramas en las que trabajamos y eventualmente, uno podría también subir cambios al repositorio
-    de otro, o tener varios orígenes remotos.
+    histórica de las ramas en las que trabajamos, aún cuando no tenemos conexión al servidor, y se puede configurar para usarlo en forma
+    distribuida. 
   \end{block}
   \footnotetext{\url{http://git-scm.com/}}
 \end{frame}
@@ -62,7 +62,7 @@
       \item Mac: \url{http://git-scm.com/download/mac} \pause
       \end{itemize}
   
-    Sea cual sea la versión, siempre disponemos de un shell donde ejecutar comandos. En linux y mac es la consola misma,
+    Sea cual sea la versión, siempre disponemos de un shell donde ejecutar comandos. En linux y mac es la consola unix,
     y en windows nos instala el Git Shell.
   \end{block}
   \pause
@@ -149,23 +149,23 @@ $ git config --global user.email "jperez@despegar.com"
 
 \subsection{Tiremos unos comandos}
 
-\begin{frame}[fragile]{Comandos (1)}
+\begin{frame}[fragile]{Comandos}
   \begin{block}{Inicializar repositorio}
     \begin{verbatim}
   $ git init
+  $ git remote add origin <remoto>
   $ git add .
   $ git commit -m "Estado inicial"
     \end{verbatim}
-  \end{block}
+  \end{block} \pause
   
   \begin{block}{Clonar repositorio remoto (configura automáticamente el orígen)}
     \begin{verbatim}
-  # ssh
+  # ssh (para poder hacer push)
   $ git clone git@gitorious.despegar.it:ejemplo.git
-  # git
+  # git (read-only)
   $ git clone git://gitorious.despegar.it:ejemplo.git
     \end{verbatim}
-    Es importante clonar con ssh si queremos hacer push en el orígen.
   \end{block}
   
 \end{frame}
