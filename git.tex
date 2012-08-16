@@ -4,6 +4,10 @@
 \usepackage[utf8]{inputenc}
 \usepackage{multicol}
 
+\mode<presentation> {
+  \setbeamercovered{transparent}
+}
+
 % Code for placing the footnote above the navigiation symbols
 \addtobeamertemplate{footnote}{\vspace{-6pt}}{\vspace{6pt}}
 \makeatletter
@@ -18,6 +22,7 @@
 \begin{document}
 \title{Workshop de Git}  
 \author{Iván Badgen, Pablo Rago}
+\institute{Despegar.com}
 \date{\today} 
 
 \begin{frame}
@@ -63,7 +68,7 @@
       \end{itemize}
   
     Sea cual sea la versión, siempre disponemos de un shell donde ejecutar comandos. En linux y mac es la consola unix,
-    y en windows nos instala el Git Shell.
+    y en windows nos instala el Git Shell. 
   \end{block}
   \pause
   \begin{block}{Ayuda!}
